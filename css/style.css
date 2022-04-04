@@ -1,0 +1,282 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap');
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+.d-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container {
+    width: 90%;
+    margin: 0px auto;
+    min-height: 100%;
+}
+
+.header {
+     position: fixed;
+     z-index: 1000;
+     left: 0;
+     right: 0;
+     top: 0;
+     height: 10vh;
+     box-shadow: 0 0 10px 0 black;
+     background-color: whitesmoke;
+}
+
+.menu {
+    width: 50%;
+}
+
+.menu-link {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 28px;
+    color: black !important;
+    font-weight: bold;
+    transition-property: all;
+    transition-duration: 0.6s;
+    border-bottom: solid 3px whitesmoke;
+}
+
+.menu-link:hover {
+    border-bottom: solid 3px #879c37;
+    color: #879c37 !important;
+}
+
+.menu-link .green{
+    transition-property: all;
+    transition-duration: 0.6s;
+}
+
+.menu-link:hover .green{
+    color: black !important;
+}
+
+.green {
+    color: #879c37 !important;
+}
+
+.section {
+    height: 100vh;
+}
+
+.section:target {
+    padding-top: 10vh;
+}
+
+
+#home {
+    margin-top: 0;
+    padding-top: 0;
+    background: url('../img/bg1.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+#home .button {
+    position: absolute;
+    z-index: 100;
+    bottom: 40px;
+    left: 75px;
+    animation: shaking 2s linear 1s infinite normal none;
+}
+#home .button:hover {
+    animation-play-state: paused;
+}
+
+@keyframes shaking {
+    0% {left: 75px;}
+    5%{left: 90px;}
+    10% {left: 75px;}
+    15%{left: 90px;}
+    20% {left: 75px;}
+    25%{left: 90px;}
+    30% {left: 75px;}
+}
+
+
+#home .button span{
+    margin: 0px auto;
+}
+
+.button{
+    background-color: white;
+    padding: 5px;
+    border: solid 3px #879c37;
+    width: 150px;
+    height: 40px;
+    margin: 6px;
+    text-align: center;
+    transition-property: all;
+    transition-duration: 0.7s;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.button:hover{
+    background-color: #879c37;
+    cursor: pointer;
+}
+
+.button:hover span, .button:hover a{
+    color: white !important;
+}
+
+#about {
+    height: 100vh;
+}
+
+.about-image {
+    position: relative;
+    z-index: 80;
+    width: 60vh;
+    height: 65vh;
+    background: url('../img/about1.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.about-image::before {
+    display: block;
+    content: "";
+    width: 60vh;
+    height: 65vh;
+    position: relative;
+    top: -3vh;
+    left: -2vw;
+    z-index: 90;
+    border: double #879c37 7px;
+}
+
+.about-text {
+    width: 45vw;
+    padding: 10px;
+}
+
+.about-text *{
+    padding: 10px;
+}
+
+.about-text h1{
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 32px;
+}
+
+.about-text p {
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+.about-text span{
+    padding: 0;
+}
+
+#works {
+    background: url('../img/bg2.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.project{
+    width: 30%;
+    height: 70vh;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    border: solid #879c37 7px;
+    box-sizing: border-box;
+}
+
+.project::before{
+    content: "My Project";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 70vh;
+    color: white;
+    background-color: #879c37;
+    font-size: 32px;
+    font-family: 'Roboto Condensed', sans-serif;
+    position: relative;
+    transition-property: all;
+    transition-duration: 0.7s;
+}
+
+.project:nth-child(1){
+    background-image: url('../img/project1.png');
+}
+
+.project:nth-child(2){
+    background-image: url('../img/project2.png');
+}
+
+.project:nth-child(3){
+    background-image: url('../img/project3.png');
+}
+
+.project:nth-child(1):before{
+    left: -100%;
+}
+
+.project:nth-child(2):before{
+    top: -120%;
+}
+
+.project:nth-child(3):before{
+    right: -100%;
+}
+
+.project:nth-child(1):hover:before{
+    left: 0;
+}
+
+.project:nth-child(2):hover:before{
+    top: 0;
+}
+
+.project:nth-child(3):hover:before{
+    right: 0;
+}
+
+#contact {
+    font-family: 'Lato', sans-serif;
+    height: 95vh;
+}
+
+.contact-info p{
+    font-size: 16px;
+    font-weight: 600;
+    padding: 5px;
+}
+
+.contact-map {
+    width: 70%;
+    height: 65vh;
+    border: solid #879c37 7px;
+}
+
+.footer {
+    font-family: 'Lato', sans-serif;
+    height: 5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.copyright {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
